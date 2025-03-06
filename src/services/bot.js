@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const cron = require('node-cron');
 const fs = require('fs');
 
-async function fetchData(url) {
+    async function fetchData(url) {
     try {
         const { data } = await axios.get(url, {
             headers: {
@@ -70,7 +70,7 @@ async function fetchData(url) {
     }
 }
 
-cron.schedule('34 12 * * *', () => {
-    console.log('Запуск парсинга в 12:34');
+cron.schedule('18 22 * * *', () => {
+    console.log('Запуск парсинга в 22:18');
     fetchData('https://toomics.com/en');
 });
